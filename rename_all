@@ -1,0 +1,4 @@
+# for example; to Rename all *.txt to *.text would be like this :
+for file in *.txt; do 
+mv -- "$file" "${file%.txt}.text"
+done
