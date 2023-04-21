@@ -1,4 +1,4 @@
 # to zip all subdirectiories in a directory :
-for i in */; do
+for i in */; do # if you want to compress files instead of sub-dirs, just remove / after *
 zip -r "${i%/}.zip" "$i";
 done
