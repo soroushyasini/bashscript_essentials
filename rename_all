@@ -4,7 +4,7 @@ mv -- "$file" "${file%.txt}.text"
 done
 
 ###########
-# I had some files with *.SAFE.zip extention and iu wanted to chage it to *.zip. so here is the code :
+# I had some files with *.SAFE.zip extention and I wanted to change it to *.zip. so here is the code :
 
 for file in *.SAFE.zip; do
 mv -- "$file" "${file%.SAFE.zip}.zip";
