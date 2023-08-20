@@ -1,0 +1,2 @@
+#script to replace newlines( ENTER ) with SPACE :
+sed ':a;N;$!ba;s/\n/ /g' old.txt > new.txt
