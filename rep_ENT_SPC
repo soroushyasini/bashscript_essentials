@@ -1,2 +1,4 @@
 #script to replace newlines( ENTER ) with SPACE :
 sed ':a;N;$!ba;s/\n/ /g' old.txt > new.txt
+# to replace SPACE with  ( "," )
+sed -e 's/\s\+/","/g' old.txt > new.txt
