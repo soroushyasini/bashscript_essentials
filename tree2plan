@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Remove lines with *.srt pattern
+sed -i '/\.srt/d' directory.txt
+
+# Remove [*] from all lines
+sed -i 's/\[\*\]//g' directory.txt
+
+# Remove directory hierarchy signs and leading spaces
+sed -i 's/[├└│]── //g; s/│//g' directory.txt
