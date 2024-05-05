@@ -1,0 +1,14 @@
+#!/bin/bash
+##### the code is for creating seperate dirs and put each representive Envisat images into it
+# Loop through each file
+for file in *N1; do
+    # Extract the date from the file name, the name
+    # is ASA_IMS_1PNESA20030927_061640_000000182020_00163_08233_0000.N1 e.g.
+    directory=$(echo "$file" | grep -oE 'ESA[0-9]{8}' | cut -c4-)
+
+    # Create the directory if it doesn't exist
+    mkdir -p "$directory"
+
+    # Move the file to its respective directory
+    mv "$file" "$directory/"
+done
